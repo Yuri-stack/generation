@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primaryColor: #fc8905;
+    --secondaryColor: #f14d5c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style: none;
+
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body{
+    min-height: 100vh;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    background-image: url(images/plano.jpg);
+    background-image: linear-gradient(180deg, var(--primaryColor), var(--secondaryColor));
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+footer {
+    margin-top: auto;
+}
+
+header{
+    background-color: white;
+    color: black;
+    height: 100%;
+    padding: 12px 0;
+    text-align: center;
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: 200ms;
+}
+
+.menu ul li a:hover{
+    color: var(--primaryColor);
+}
+
+.menu li a{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 10em;
+}
+
+/* Sobre */
+
+.banner {
+    margin: 48px auto 0;
+    max-width: 940px;
+}
+
+.banner .container-banner{
+    max-width: 940px;
+    height: 360px;
+    margin: auto auto 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.8);
+
+    opacity: 0;
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: 400ms;
+}
+
+.banner .container-banner div{
+    align-items: center;
+    margin: auto;
+}
+
+.banner .container-banner.principal div{ 
+    margin: 2rem 5rem;
+}
+
+.banner .container-banner.principal{
+    grid-template-columns: 1fr;
+}
+
+.banner .container-banner.principal div p{
+    width: 100%;
+}
+
+.banner .container-banner div h2{
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.banner .container-banner div p{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    width: 350px;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+.banner .container-banner .banner-img img{
+    width: 25em;
+}
+
+/* Contato */
+
+form {
+    width: 90%;
+    max-width: 700px;
+    padding: 32px 24px;
+    margin: 32px auto;
+    
+    background-color: white;
+    box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, .9);
+    border: 1px solid #EFEFEF;
+    border-radius: 25px 0 25px 0;
+
+    opacity: 0;
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: 400ms;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    margin: 8px 0 16px 0;
+    padding: 8px 16px;
+    
+    font-size: 16px;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 12px 16px;
+    
+    background-color: var(--primaryColor);
+    color: white;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover{
+    background-color: var(--secondaryColor);
+}
+
+@keyframes up{
+    from{
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
